@@ -1,0 +1,51 @@
+{
+  "name": "rolling-dices",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/Nehorim/roll#readme",
+  "keywords": [],
+  "bin": {
+    "roll": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "jest --coverage --colors",
+    "start": "yarn run build:live",
+    "build": "rm -rf dist/ && tsc -p ./tsconfig.build.json",
+    "build:live": "tsnd --watch 'src/**/*.ts,config/**/*.*' src/index.ts --includeHalf=true --include5th=true 1d100 + 3d6",
+    "lint": "eslint --ext .ts,.js ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint --fix",
+      "pre-push": "yarn test"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "25.1.4",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.10",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2",
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "mathjs": "^6.6.1",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.16",
+    "typescript": "^3.8.3",
+    "yargs": "^15.3.0"
+  }
+}

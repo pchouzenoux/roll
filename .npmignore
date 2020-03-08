@@ -1,0 +1,12 @@
+.env
+.eslintrc.js
+.nvmrc
+.prettierrc
+yarn.lock
+tsconfig.json
+tsconfig.build.json
+jest.config.js
+
+src/
+coverage/
+test/
