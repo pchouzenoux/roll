@@ -21,7 +21,7 @@ describe('diceparser/evaluate test suite', () => {
     { input: '1d100 + 4d10', expectedMin: 5, expectedMax: 140 },
   ];
 
-  [...basicTests, ...complexeTests].forEach(testInput => {
+  [...basicTests, ...complexeTests].forEach((testInput) => {
     test(`${testInput.input} should return something between ${testInput.expectedMin} and ${testInput.expectedMax}`, () => {
       for (let i = 0; i < 100; i += 1) {
         const result = evaluate(testInput.input);

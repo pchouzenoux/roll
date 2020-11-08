@@ -6,11 +6,11 @@ sourcemap.install();
 
 import roll from './roll';
 
-process.on('uncaughtException', err => {
+process.on('uncaughtException', (err) => {
   console.error('💀  UncaughtException', err);
 });
 
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   console.error('💀  UnhandledRejection', err);
 });
 

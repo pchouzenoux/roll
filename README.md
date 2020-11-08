@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-$ yarn install -g rolling-dices
+$ yarn global add rolling-dices
 ```
 
 ## How to use

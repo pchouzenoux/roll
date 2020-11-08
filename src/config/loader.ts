@@ -1,7 +1,5 @@
 import fs from 'fs';
 
-const DEFAULT_CONFIG: RollConfig = {};
-
 export interface RollConfig {
   options?: {
     verbose?: boolean;
@@ -9,6 +7,8 @@ export interface RollConfig {
     includeHalf?: boolean;
   };
 }
+
+const DEFAULT_CONFIG: RollConfig = {};
 
 const getDefaultConfig = (): RollConfig => {
   try {
@@ -22,6 +22,7 @@ const getDefaultConfig = (): RollConfig => {
   }
   return DEFAULT_CONFIG;
 };
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const loadConfig = (args: any): RollConfig => {
   const config = getDefaultConfig();
 
