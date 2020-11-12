@@ -24,7 +24,6 @@ module.exports = {
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-    'no-console': 'off',
     'sort-imports': [
       'warn',
       {
@@ -35,6 +34,11 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/camelcase': 'off',
+    'no-shadow': 'off', // We have to use '@typescript-eslint/no-shadow'
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.ts', '**/*.spec.ts'] },
+    ],
     // Override Airbnb base config
     'import/first': 'off',
     'no-useless-constructor': 'off',
