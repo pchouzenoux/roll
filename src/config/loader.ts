@@ -9,7 +9,6 @@ const DEFAULT_CONFIG: RollConfig = {
 };
 
 export const loadConfig = (args: any): RollConfig => {
-  console.log(args);
   return {
     ...DEFAULT_CONFIG,
     ...args,
