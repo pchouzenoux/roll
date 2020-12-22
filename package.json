@@ -15,7 +15,8 @@
     "start": "yarn run build:live",
     "build": "rm -rf dist/ && tsc -p ./tsconfig.build.json",
     "build:live": "tsnd --watch 'src/**/*.ts,config/**/*.*' src/index.ts -h 1d20+6",
-    "lint": "eslint --ext .ts,.js ."
+    "lint": "eslint --ext .ts,.js .",
+    "prepare": "yarn build"
   },
   "husky": {
     "hooks": {

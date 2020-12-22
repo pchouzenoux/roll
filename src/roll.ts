@@ -6,6 +6,6 @@ import { printResult } from './reporter';
 export default function roll(): void {
   const rollConfig = loadConfig(args);
 
-  const result = evaluate(args._);
+  const result = evaluate(args._ as string[]);
   printResult(result, rollConfig);
 }
