@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 export interface RollConfig {
   verbose?: boolean;
 }
