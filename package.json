@@ -1,6 +1,6 @@
 {
   "name": "rolling-dices",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -16,37 +16,31 @@
     "build": "rm -rf dist/ && tsc -p ./tsconfig.build.json",
     "build:live": "tsnd --watch 'src/**/*.ts,config/**/*.*' src/index.ts -h 1d20+6",
     "lint": "eslint --ext .ts,.js .",
-    "prepare": "yarn build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint --fix",
-      "pre-push": "yarn test"
-    }
+    "prepare": "yarn build && husky install"
   },
   "devDependencies": {
-    "@types/jest": "26.0.23",
-    "@types/node": "^15.12.2",
-    "@typescript-eslint/eslint-plugin": "^4.26.1",
-    "@typescript-eslint/parser": "^4.26.1",
-    "eslint": "^7.28.0",
+    "@types/jest": "26.0.24",
+    "@types/node": "^16.3.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.3.0",
-    "husky": "4.3.8",
-    "jest": "^27.0.4",
-    "prettier": "^2.3.1",
+    "husky": "^7.0.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
     "ts-jest": "^27.0.3",
-    "ts-node": "^10.0.0",
-    "ts-node-dev": "^1.1.1"
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8"
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "mathjs": "^9.4.2",
+    "mathjs": "^9.4.4",
     "reflect-metadata": "^0.1.13",
     "source-map-support": "^0.5.19",
-    "typescript": "^4.3.2",
+    "typescript": "^4.3.5",
     "yargs": "^17.0.1"
   }
 }

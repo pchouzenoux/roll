@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 import 'reflect-metadata';
 import sourcemap from 'source-map-support';
 

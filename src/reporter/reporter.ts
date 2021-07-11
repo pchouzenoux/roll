@@ -19,5 +19,6 @@ function getInput(result: Result, rollConfig: RollConfig): string {
 
 export const printResult = (result: Result, rollConfig: RollConfig): void => {
   const input = getInput(result, rollConfig);
+  // eslint-disable-next-line no-console
   console.log(chalk.bold('Roll'), input, chalk.bold('='), result.value);
 };
