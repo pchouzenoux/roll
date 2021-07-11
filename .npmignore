@@ -7,6 +7,8 @@ tsconfig.json
 tsconfig.build.json
 jest.config.js
 
+.github/
+.husky/
 src/
 coverage/
 test/
